@@ -21,7 +21,7 @@ class rulesAI:
                     matches+=1#I originally wanted to have it test if two or more valid features appeared, but since I got an error for putting a dictionary in another dictionary I instead decided to assign a value to each relevant possible attribute and sum the values to determine if it was toxic or not.
         matches/=11#for some reason, the value of matches was being multiplied by 11 so I'm reversing it here
         if matches<2:
-            print("This mushroom doesn't have sufficient features to suggest it's toxicity")
+            print("There is a decent likelihood of this mushroom being edible")
             return "e"
         else:
             print("There are decent odds of this mushroom being toxic")
@@ -29,7 +29,7 @@ class rulesAI:
 
 
 
-MushFile=open("Mushroom/agaricus-lepiota.data","rt")
+MushFile=open("agaricus-lepiota.data","rt")
 AI=rulesAI()
 tries=0
 success=0
